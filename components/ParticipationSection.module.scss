@@ -1,0 +1,90 @@
+.participation {
+  padding: 4rem 1rem;
+  background-color: white;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 3.75rem;
+  max-width: calc(1200px + (3.75rem * 2));
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  color: #2f5454;
+  font-family: "Poppins", sans-serif;
+}
+
+.optionsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.option {
+  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: max-content max-content 1fr max-content;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/4;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.optionTitle {
+  font-size: 2.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2f5454;
+  font-family: "Poppins", sans-serif;
+}
+
+.optionDescription {
+  font-size: 1.25rem;
+  color: #000;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.button {
+  background-color: #2f5454;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  font-family: sans-serif;
+  width: max-content;
+
+  &:hover {
+    background-color: #1f350f;
+  }
+
+  &:focus {
+    outline: 2px solid #2f5454;
+    outline-offset: 2px;
+  }
+}
