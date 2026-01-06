@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import styles from "./LoginForm.module.scss";
 
-export const LoginForm: React.FC = () => {
+export const LoginForm: FC = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -28,10 +28,10 @@ export const LoginForm: React.FC = () => {
         // Reload the page to show the protected content
         window.location.reload();
       } else {
-        setError(data.error || "Invalid password");
+        setError(data.error || "Falsches Passwort");
       }
-    } catch (err) {
-      setError("An error occurred. Please try again.");
+    } catch {
+      setError("Ein Fehler ist aufgetreten. Bitte versuche es erneut.");
     } finally {
       setLoading(false);
     }
@@ -53,11 +53,7 @@ export const LoginForm: React.FC = () => {
             autoFocus
           />
           {error && <p className={styles.error}>{error}</p>}
-          <button
-            type="submit"
-            className={styles.button}
-            disabled={loading}
-          >
+          <button type="submit" className={styles.button} disabled={loading}>
             {loading ? "Prüfe..." : "Anmelden"}
           </button>
         </form>
@@ -65,4 +61,3 @@ export const LoginForm: React.FC = () => {
     </div>
   );
 };
-
