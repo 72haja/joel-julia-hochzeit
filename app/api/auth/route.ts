@@ -25,16 +25,10 @@ export async function POST(request: NextRequest) {
 
       return NextResponse.json({ success: true });
     } else {
-      return NextResponse.json(
-        { error: "Invalid password" },
-        { status: 401 }
-      );
+      return NextResponse.json({ error: "Falsches Passwort" }, { status: 401 });
     }
-  } catch (error) {
-    return NextResponse.json(
-      { error: "Invalid request" },
-      { status: 400 }
-    );
+  } catch {
+    return NextResponse.json({ error: "Invalid request" }, { status: 400 });
   }
 }
 
@@ -46,4 +40,3 @@ export async function GET() {
     authenticated: authCookie?.value === "authenticated",
   });
 }
-
