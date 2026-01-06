@@ -29,7 +29,7 @@ const options: ParticipationOption[] = [
     id: "champagne",
     title: "Sektempfang",
     description:
-      "Du hast Freude am backen? Dann freuen wir uns über einen Beitrag deiner Wahl zum Sektempfang. Melde dein Wunderwerk ganz einfach über den Button an!",
+      "Du hast Freude am Backen? Dann freuen wir uns über einen Beitrag deiner Wahl zum Sektempfang. Melde dein Wunderwerk ganz einfach über den Button an!",
     image: "/assets/WhatsApp Image 2026-01-06 at 17.23.13.jpeg",
     buttonText: "Wunderwerk anmelden",
     buttonHref: "https://forms.office.com/e/mfH9pQyJSP",
