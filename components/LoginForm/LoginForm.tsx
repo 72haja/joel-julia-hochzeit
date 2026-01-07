@@ -1,12 +1,14 @@
 "use client";
 
 import React, { FC, useState } from "react";
+import { EyeIcon } from "@/components/EyeIcon";
 import styles from "./LoginForm.module.scss";
 
 export const LoginForm: FC = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -43,15 +45,25 @@ export const LoginForm: FC = () => {
         <h1 className={styles.title}>Willkommen</h1>
         <p className={styles.subtitle}>Bitte geben Sie das Passwort ein</p>
         <form onSubmit={handleSubmit} className={styles.form}>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Passwort"
-            className={styles.input}
-            required
-            autoFocus
-          />
+          <div className={styles.inputWrapper}>
+            <input
+              type={showPassword ? "text" : "password"}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Passwort"
+              className={styles.input}
+              required
+              autoFocus
+            />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className={styles.eyeButton}
+              aria-label={showPassword ? "Passwort verbergen" : "Passwort anzeigen"}
+            >
+              <EyeIcon show={showPassword} />
+            </button>
+          </div>
           {error && <p className={styles.error}>{error}</p>}
           <button type="submit" className={styles.button} disabled={loading}>
             {loading ? "Prüfe..." : "Anmelden"}

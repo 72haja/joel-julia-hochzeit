@@ -1,0 +1,327 @@
+.footer {
+  background-color: #2f5454;
+  color: white;
+}
+
+.container {
+  padding: 3rem 3.75rem 2rem;
+  max-width: calc(1200px + (3.75rem * 2));
+  margin: 0 auto;
+  width: 100%;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.sectionText {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: sans-serif;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.link {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+  font-family: sans-serif;
+  transition: color 0.3s ease;
+  padding: 0;
+
+  &:hover {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 2rem;
+
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: sans-serif;
+  }
+}
+
+// Cookie Banner
+.cookieBanner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 1.5rem;
+}
+
+.cookieBannerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.cookieBannerText {
+  flex: 1;
+  min-width: 300px;
+
+  p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #333;
+    font-family: sans-serif;
+    line-height: 1.5;
+  }
+}
+
+.cookieBannerActions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.acceptButton,
+.settingsButton,
+.rejectButton {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: sans-serif;
+  transition: all 0.3s ease;
+}
+
+.acceptButton {
+  background-color: #2f5454;
+  color: white;
+
+  &:hover {
+    background-color: #1a3a3a;
+  }
+}
+
+.settingsButton {
+  background-color: transparent;
+  color: #2f5454;
+  border: 2px solid #2f5454;
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+}
+
+.rejectButton {
+  background-color: transparent;
+  color: #666;
+  border: 2px solid #ccc;
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+}
+
+// Modal
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal {
+  background: white;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.modalTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #2f5454;
+}
+
+.modalClose {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #666;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #333;
+  }
+}
+
+.modalContent {
+  padding: 1.5rem;
+}
+
+.modalDescription {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+  font-family: sans-serif;
+}
+
+.cookieCategory {
+  margin-bottom: 2rem;
+}
+
+.cookieCategoryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.cookieCategoryTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #2f5454;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}
+
+.cookieCategoryDescription {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.modalActions {
+  padding: 1.5rem;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.saveButton {
+  padding: 0.75rem 2rem;
+  background-color: #2f5454;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: sans-serif;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #1a3a3a;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .cookieBannerContent {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cookieBannerActions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .acceptButton,
+  .settingsButton,
+  .rejectButton {
+    width: 100%;
+  }
+
+  .modal {
+    max-height: 95vh;
+  }
+}

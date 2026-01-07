@@ -1,0 +1,2 @@
+export { WeddingHero } from "./WeddingHero";
+

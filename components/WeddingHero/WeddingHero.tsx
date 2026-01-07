@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./WeddingHero.module.scss";
 import Image from "next/image";
 import NextLink from "next/link";
-import { ScrollDownButton } from "./ScrollDownButton";
+import { ScrollDownButton } from "@/components/ScrollDownButton";
 
 export const WeddingHero: React.FC = () => {
   return (
