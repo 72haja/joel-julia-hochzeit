@@ -42,11 +42,14 @@
   width: 100%;
 
   @media (max-width: 768px) {
-    padding: 1.5rem;
+    padding: 2rem;
   }
 }
 
 .content {
+    display: flex;
+    flex-direction: column;
+
   @media (max-width: 768px) {
     margin-left: 0;
   }
@@ -117,6 +120,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  width: max-content;
 
   &:hover {
     background-color: #f0f0f0;

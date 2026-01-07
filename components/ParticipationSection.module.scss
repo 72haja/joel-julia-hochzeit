@@ -1,12 +1,20 @@
 .participation {
   padding: 4rem 1rem;
   background-color: white;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 }
 
 .container {
   margin: 0 auto;
   padding: 3.75rem;
   max-width: calc(1200px + (3.75rem * 2));
+
+  @media (max-width: 768px) {
+    padding: 2rem;
+  }
 }
 
 .title {
@@ -15,6 +23,11 @@
   margin-bottom: 3rem;
   color: #2f5454;
   font-family: "Poppins", sans-serif;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+  }
 }
 
 .optionsGrid {
@@ -22,9 +35,8 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 
-  @media (max-width: 968px) {
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    gap: 3rem;
   }
 }
 
@@ -43,6 +55,11 @@
   margin-bottom: 1.5rem;
   border-radius: 8px;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    margin-bottom: 0.75rem;
+    aspect-ratio: 1/1;
+  }
 }
 
 .image {
@@ -55,6 +72,11 @@
   margin-bottom: 1rem;
   color: #2f5454;
   font-family: "Poppins", sans-serif;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
 }
 
 .optionDescription {
@@ -62,6 +84,11 @@
   color: #000;
   line-height: 1.6;
   margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+  }
 }
 
 .button {
@@ -86,5 +113,12 @@
   &:focus {
     outline: 2px solid #2f5454;
     outline-offset: 2px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    text-align: center;
   }
 }
