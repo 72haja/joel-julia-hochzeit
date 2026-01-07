@@ -29,6 +29,7 @@ export default async function Home() {
         lon={8.828957927146806}
         title="Feierlocation"
         address={["Oberer Hauserweg 50", "71149 Bondorf"]}
+        iframeDelay={400}
       />
       <InfoBlock />
     </main>
