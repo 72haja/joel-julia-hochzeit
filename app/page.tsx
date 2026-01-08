@@ -1,5 +1,6 @@
 import { cookies } from "next/headers";
 import { ParticipationSection } from "@/components/ParticipationSection";
+import { GiftList } from "@/components/GiftList";
 import { InfoBlock } from "@/components/InfoBlock";
 import { WeddingDetails } from "@/components/WeddingDetails";
 import { WeddingHero } from "@/components/WeddingHero";
@@ -7,9 +8,12 @@ import { LoginForm } from "@/components/LoginForm";
 import { Footer } from "@/components/Footer/Footer";
 
 export default async function Home() {
+  const isDevelopment = process.env.NODE_ENV === "development";
+
   const cookieStore = await cookies();
   const authCookie = cookieStore.get("auth");
-  const isAuthenticated = authCookie?.value === "authenticated";
+  const isAuthenticated =
+    isDevelopment || authCookie?.value === "authenticated";
 
   return (
     <>
@@ -19,6 +23,7 @@ export default async function Home() {
         <main className="bg-white">
           <WeddingHero />
           <ParticipationSection />
+          <GiftList />
           <WeddingDetails
             lat={48.52163540560999}
             lon={8.83657451397345}

@@ -1,0 +1,136 @@
+.giftList {
+  padding: 4rem 1rem;
+  background-color: #f8f9fa;
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #2f5454;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+
+  @media (max-width: 768px) {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.text {
+  font-size: 1.25rem;
+  color: #333;
+  line-height: 1.8;
+  margin: 0;
+  font-family: sans-serif;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+.iframeContainer {
+  width: 100%;
+  margin-top: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+.iframe {
+  width: 100%;
+  min-height: 800px;
+  border: none;
+  display: block;
+
+  @media (max-width: 768px) {
+    min-height: 600px;
+  }
+}
+
+.iframeFallback {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.fallbackText {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.fallbackLink {
+  color: #2f5454;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #1a3a3a;
+  }
+}
+
+.button {
+  background-color: #2f5454;
+  color: white;
+  border: 2px solid #2f5454;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-family: sans-serif;
+  width: max-content;
+  margin: 1rem auto 0;
+  box-shadow: 0 4px 6px rgba(47, 84, 84, 0.2);
+
+  &:hover {
+    background-color: #1a3a3a;
+    border-color: #1a3a3a;
+    box-shadow: 0 6px 12px rgba(47, 84, 84, 0.3);
+    transform: translateY(-2px);
+  }
+
+  &:focus {
+    outline: 2px solid #2f5454;
+    outline-offset: 2px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    padding: 0.875rem 2rem;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
